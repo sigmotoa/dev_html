@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
+
+<h3>Info de las sesiones</h3>
+
+<table>
+    <tr>
+        <th>Tema</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Mentor</th>
+        <th>Enlace</th>
+    </tr>
+    <tbody>
+    {% for sesion in sesiones %}
+    <tr>
+    <td>{{ sesion.Tema }}</td>
+    <td>{{ sesion.Fecha }}</td>
+    <td>{{ sesion.Hora }}</td>
+    <td>{{ sesion.Mentor }}</td>
+    <td>{{ sesion.Enlace }}</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+
+
+</table>
+
 <h6>Aqui tenemos mas info</h6>
 
 <a type="button" href="/"> Regresar</a>
