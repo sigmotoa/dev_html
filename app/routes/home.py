@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+import pandas as pd
 
 templates = Jinja2Templates(directory="templates")
 router = APIRouter()
@@ -12,4 +13,7 @@ async def read_home(request: Request):
 
 @router.get("/info", response_class=HTMLResponse)
 async def read_info(request:Request):
-    return templates.TemplateResponse("info.html",{"request":request})
+    csv_file = "data/capacitaciones_mintic.csv"
+    sesiones = pd.read_csv(csv_file)
+    lista = sesiones.to_dict(orient="records")
+    return templates.TemplateResponse("info.html",{"request":request, "sesiones":lista})
