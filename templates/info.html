@@ -8,7 +8,7 @@
 
 <h3>Info de las sesiones</h3>
 
-<table>
+<table style="color: aqua">
     <tr>
         <th>Tema</th>
         <th>Fecha</th>
@@ -22,8 +22,8 @@
     <td>{{ sesion.Tema }}</td>
     <td>{{ sesion.Fecha }}</td>
     <td>{{ sesion.Hora }}</td>
-    <td>{{ sesion.Mentor }}</td>
-    <td>{{ sesion.Enlace }}</td>
+    <td style="color: chocolate">  {{ sesion.Mentor }}</td>
+    <td> <a href="{{ sesion.Enlace }}">Ver Grabación</a></td>
 
     </tr>
     {% endfor %}
