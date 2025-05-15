@@ -17,7 +17,6 @@ async def read_info(request:Request):
     sesiones = pd.read_csv(csv_file)
     lista = sesiones.to_dict(orient="records")
     return templates.TemplateResponse("info.html",{"request":request, "sesiones":lista})
-    return templates.TemplateResponse("home.html", {"request": request, "title":"@sigmotoa", "name":10})
 
 
 @router.get("/html", response_class=HTMLResponse)
