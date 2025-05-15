@@ -7,7 +7,7 @@ router = APIRouter()
 
 @router.get("/", response_class=HTMLResponse)
 async def read_home(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
+    return templates.TemplateResponse("home.html", {"request": request, "title":"@sigmotoa", "name":10})
 
 
 @router.get("/html", response_class=HTMLResponse)
