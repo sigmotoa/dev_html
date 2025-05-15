@@ -17,3 +17,18 @@ async def read_info(request:Request):
     sesiones = pd.read_csv(csv_file)
     lista = sesiones.to_dict(orient="records")
     return templates.TemplateResponse("info.html",{"request":request, "sesiones":lista})
+
+
+@router.get("/html", response_class=HTMLResponse)
+async def pure_html():
+    html_content = """
+        <html>
+            <head>
+                <title>sigmotoa</title>
+            </head>
+            <body>
+                <h1>Look ma! HTML!</h1>
+            </body>
+        </html>
+        """
+    return HTMLResponse(content=html_content, status_code=200)
