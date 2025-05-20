@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Crear nuevo evento</h2>
+<form method="post" action="/add">
+    <label>Tema: <input type="text" name="tema" required> </label> <br>
+    <label>Fecha: <input type="date" name="fecha" required> </label> <br>
+    <label>Hora: <input type="time" name="hora" required> </label> <br>
+    <label>Nombre del Mentor: <input type="text" name="nombre_mentor" required> </label> <br>
+    <label>Linkk: <input type="url" name="link" required> </label> <br>
+
+
+    <button type="submit">Crear evento</button>
+
+</form>
+{% endblock %}
