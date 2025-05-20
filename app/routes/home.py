@@ -16,7 +16,7 @@ async def read_info(request:Request):
     csv_file = "data/capacitaciones_mintic.csv"
     sesiones = pd.read_csv(csv_file)
     lista = sesiones.to_dict(orient="records")
-    return templates.TemplateResponse("info.html",{"request":request, "sesiones":lista})
+    return templates.TemplateResponse("info.html",{"request":request, "sesiones":lista, "titulo":"Datos en tabla"})
 
 
 @router.get("/html", response_class=HTMLResponse)

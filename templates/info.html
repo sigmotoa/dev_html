@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
+{% extends 'base.html' %}
+{% block title %} {{ titulo }} - Visualizando {% endblock %}
+{% block content %}
 <h3>Info de las sesiones</h3>
 
+<h6>Aqui tenemos mas info</h6>
+
+<a type="button" href="/"> Regresar</a>
+
 <table style="color: aqua">
+
     <tr>
         <th>Tema</th>
         <th>Fecha</th>
@@ -19,11 +19,11 @@
     <tbody>
     {% for sesion in sesiones %}
     <tr>
-    <td>{{ sesion.Tema }}</td>
-    <td>{{ sesion.Fecha }}</td>
-    <td>{{ sesion.Hora }}</td>
-    <td style="color: chocolate">  {{ sesion.Mentor }}</td>
-    <td> <a href="{{ sesion.Enlace }}">Ver Grabación</a></td>
+        <td>{{ sesion.Tema }}</td>
+        <td>{{ sesion.Fecha }}</td>
+        <td>{{ sesion.Hora }}</td>
+        <td style="color: chocolate">  {{ sesion.Mentor }}</td>
+        <td> <a href="{{ sesion.Enlace }}">Ver Grabación</a></td>
 
     </tr>
     {% endfor %}
@@ -32,8 +32,4 @@
 
 </table>
 
-<h6>Aqui tenemos mas info</h6>
-
-<a type="button" href="/"> Regresar</a>
-</body>
-</html>
+{% endblock %}
