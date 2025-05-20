@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>{{title}}</title>
-</head>
-<body>
-<nav style="display: inline">
-        <ul style="display: inline-flex;list-style-type: none; gap: 1rem">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/info">Información</a></li>
-            <li><a href="https://sigmotoa.com">Creador</a></li>
-        </ul>
-    </nav>
+{% extends 'base.html' %}
+{% block title %} Inicio - Visualizando {% endblock %}
+{% block content %}
 <h1>Hola Mundo desde FastAPI</h1>
 <h1>{{title}}</h1>
 <h2>Este es un ejemplo de subtítulo</h2>
@@ -32,9 +21,6 @@
 <br>
 <a href="https://sigmotoa.com">Esto es un enlace</a>
 
- <footer style="margin-top: 2em;">
-        <hr>
-        <p>Proyecto educativo “Visualizando” — FastAPI + HTML. by: sigmotoa 2025</p>
-    </footer>
-</body>
-</html>
+
+{% endblock %}
+
