@@ -1,17 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<section class="nes-container with-title is-centered">
 <h2>Crear nuevo evento</h2>
 <form method="post" action="/add">
-    <label>Tema: <input type="text" name="tema" required> </label> <br>
+    <div class="nes-field">
+      <label for="tema">Tema</label>
+      <input type="text" id="tema" name="tema" class="nes-input" required>
+    </div>
     <label>Fecha: <input type="date" name="fecha" required> </label> <br>
     <label>Hora: <input type="time" name="hora" required> </label> <br>
     <label>Nombre del Mentor: <input type="text" name="nombre_mentor" required> </label> <br>
     <label>Linkk: <input type="url" name="link" required> </label> <br>
     <label>Picture: <input type="file" name="Picture"> </label> <br>
 
+<div class="mt-4">
+      <button type="submit" class="nes-btn is-primary">Crear evento</button>
 
-    <button type="submit">Crear evento</button>
+    </div>
 
 </form>
+    </section>
 {% endblock %}
