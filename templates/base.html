@@ -3,15 +3,23 @@
 <head>
 
     <meta charset="UTF-8">
-    <title >{% block title %} - Visualizando {% endblock %}</title>
+    <link href="/static/dist/rpgui.css" rel="stylesheet" type="text/css">
+    <script src="/static/dist/rpgui.js"></script>
+    <title>{% block title %} - Visualizando {% endblock %}</title>
 
 </head>
 <body style="color: red">
+<div class="rpgui-content">
+
+        <div class="rpgui-container framed rpgui-draggable rpgui-cursor-point" style="height:max-content; width:max-content; top: 50px; left: 50px;">
 {% include 'includes/navbar.html' %}
 
 <main>
     {% block content %}{% endblock %}
 </main>
- {% include 'includes/footer.html' %}
+{% include 'includes/footer.html' %}
+        </div>
+        </div>
+
 </body>
 </html>
