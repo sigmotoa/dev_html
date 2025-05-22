@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalle de la sesión{% endblock %}
+
+{% block content %}
+<h2>Detalles de la sesión</h2>
+<ul>
+  <li><strong>Tema:</strong> {{ sesion.tema }}</li>
+  <li><strong>Fecha:</strong> {{ sesion.fecha }}</li>
+  <li><strong>Hora:</strong> {{ sesion.hora }}</li>
+  <li><strong>Mentor:</strong> {{ sesion.nombre_mentor }}</li>
+  <li><strong>Link:</strong> <a href="{{ sesion.link }}" target="_blank">{{ sesion.link }}</a></li>
+</ul>
+<a href="/info">← Volver a eventos</a>
+{% endblock %}
