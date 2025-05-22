@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
     <meta charset="UTF-8">
     <title >{% block title %} - Visualizando {% endblock %}</title>
 
@@ -10,8 +11,15 @@
 {% include 'includes/navbar.html' %}
 
 <main>
+    <div class="window" role="tabpanel">
+            <div class="window-body">
+                
+
     {% block content %}{% endblock %}
+                </div>
+        </div>
 </main>
  {% include 'includes/footer.html' %}
 </body>
+
 </html>
