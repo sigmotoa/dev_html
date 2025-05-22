@@ -3,7 +3,9 @@
 {% block content %}
 <h2>Crear nuevo evento</h2>
 <form method="post" action="/add">
-    <label>Tema: <input type="text" name="tema" required> </label> <br>
+    <div class="mb-3">
+
+    <label class="form-label">Tema: <input type="text" name="tema" required> </label> <br>
     <label>Fecha: <input type="date" name="fecha" required> </label> <br>
     <label>Hora: <input type="time" name="hora" required> </label> <br>
     <label>Nombre del Mentor: <input type="text" name="nombre_mentor" required> </label> <br>
@@ -11,7 +13,8 @@
     <label>Picture: <input type="file" name="Picture"> </label> <br>
 
 
-    <button type="submit">Crear evento</button>
+    </div>
+    <button type="submit" class="btn btn-primary">Crear evento</button>
 
 </form>
 {% endblock %}
