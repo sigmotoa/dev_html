@@ -5,16 +5,49 @@
 <form method="post" action="/add">
     <div class="mb-3">
 
-    <label class="form-label">Tema: <input type="text" name="tema" required> </label> <br>
-    <label>Fecha: <input type="date" name="fecha" required> </label> <br>
+
+        <label class="form-label">Tema: </label>
+        <input type="text" name="tema" required class="form-control" id="exampleInputEmail1"
+               aria-describedby="temaHelp" placeholder="Tema">
+
+    </div>
+    <br>
+    <div class="form-floating mb-3">
+        <input type="date" class="form-control" id="floatingInput" name="fecha" required placeholder="fecha">
+        <label for="floatingInput">Fecha: </label> <br>
+    </div>
     <label>Hora: <input type="time" name="hora" required> </label> <br>
-    <label>Nombre del Mentor: <input type="text" name="nombre_mentor" required> </label> <br>
-    <label>Linkk: <input type="url" name="link" required> </label> <br>
+
+    <div class="form-floating">
+        <input type="text" name="nombre_mentor" required class="form-control" id="floatingInput"
+               placeholder="sigmotoa">
+        <label for="floatingInput"> Nombre del Mentor: </label> <br>
+    </div>
+    <label>Link: <input type="url" name="link" required> </label> <br>
     <label>Picture: <input type="file" name="Picture"> </label> <br>
 
 
     </div>
-    <button type="submit" class="btn btn-primary">Crear evento</button>
+    <button type="submit" class="btn btn-success">Crear evento</button>
 
 </form>
 {% endblock %}
+
+
+<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
