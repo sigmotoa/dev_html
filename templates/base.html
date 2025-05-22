@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <style>
+        html, body, pre, code, kbd, samp {
+            font-family: 'Press Start 2P', cursive, monospace;
+        }
+    </style>
 
     <meta charset="UTF-8">
-    <title >{% block title %} - Visualizando {% endblock %}</title>
+    <title>{% block title %} - Visualizando {% endblock %}</title>
 
 </head>
 <body style="color: red">
@@ -12,6 +19,6 @@
 <main>
     {% block content %}{% endblock %}
 </main>
- {% include 'includes/footer.html' %}
+{% include 'includes/footer.html' %}
 </body>
 </html>
