@@ -25,6 +25,7 @@
         <td>{{ sesion.Hora }}</td>
         <td style="color: chocolate">  {{ sesion.Mentor }}</td>
         <td> <a href="{{ sesion.Enlace }}">Ver Grabación</a></td>
+        <td><a href="/detail/{{ loop.index0 }}">Ver detalle</a></td>
 
     </tr>
     {% endfor %}
